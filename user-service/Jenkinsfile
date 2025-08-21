@@ -61,9 +61,9 @@ pipeline {
             steps {
                 script {
                     bat "docker pull ${IMAGE_NAME}:${BUILD_NUMBER}"
-                    bat "docker stop nodeapp-cuban || exit 0"
-                    bat "docker rm nodeapp-cuban || exit 0"
-                    bat "docker run -d --name nodeapp-cuban -p 3001:3001 ${IMAGE_NAME}:${BUILD_NUMBER}"
+                    bat "docker stop blood-circle-user-service || exit 0"
+                    bat "docker rm blood-circle-user-service || exit 0"
+                    bat "docker run -d --name blood-circle-user-service -p 3001:3001 ${IMAGE_NAME}:${BUILD_NUMBER}"
                 }
             }
         }
