@@ -354,7 +354,7 @@ exports.updateEventOrganiser = async (req, res) => {
     }
 
     // Update fields
-    const updateData = { name, email, nic, address, telephoneNo, roleId };
+    const updateData = { name, email, nic, address, telephoneNo };
     if (password) {
       updateData.password = password; // Will be hashed by beforeUpdate hook
     }
